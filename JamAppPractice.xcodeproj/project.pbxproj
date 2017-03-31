@@ -12,6 +12,7 @@
 		AC9AD004D2BF1BF06CA9F174 /* Pods_JamAppPracticeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CE1ABF96A71EEA28E99AFFA /* Pods_JamAppPracticeTests.framework */; };
 		EC6A3CD71E8E8FE600F5E717 /* SequencerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC6A3CD61E8E8FE600F5E717 /* SequencerCell.swift */; };
 		EC6A3CD91E8E91FE00F5E717 /* SequencerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC6A3CD81E8E91FE00F5E717 /* SequencerViewController.swift */; };
+		EC6A3CDB1E8ED6BA00F5E717 /* Sequencer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC6A3CDA1E8ED6BA00F5E717 /* Sequencer.swift */; };
 		ECD599E01E831D380028505E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECD599DF1E831D380028505E /* AppDelegate.swift */; };
 		ECD599E51E831D380028505E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECD599E31E831D380028505E /* Main.storyboard */; };
 		ECD599E71E831D380028505E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ECD599E61E831D380028505E /* Assets.xcassets */; };
@@ -49,6 +50,7 @@
 		D2BF28357E02BC8E6DFBFD41 /* Pods_JamAppPracticeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JamAppPracticeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC6A3CD61E8E8FE600F5E717 /* SequencerCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SequencerCell.swift; sourceTree = "<group>"; };
 		EC6A3CD81E8E91FE00F5E717 /* SequencerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SequencerViewController.swift; sourceTree = "<group>"; };
+		EC6A3CDA1E8ED6BA00F5E717 /* Sequencer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sequencer.swift; sourceTree = "<group>"; };
 		ECD599DC1E831D380028505E /* JamAppPractice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JamAppPractice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECD599DF1E831D380028505E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ECD599E41E831D380028505E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -119,6 +121,7 @@
 		EC6A3CD51E8E8D1D00F5E717 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				EC6A3CDA1E8ED6BA00F5E717 /* Sequencer.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -494,6 +497,7 @@
 			files = (
 				EC6A3CD71E8E8FE600F5E717 /* SequencerCell.swift in Sources */,
 				ECD599E01E831D380028505E /* AppDelegate.swift in Sources */,
+				EC6A3CDB1E8ED6BA00F5E717 /* Sequencer.swift in Sources */,
 				ECD5D5D11E83591800ED04C9 /* OscSequencer.swift in Sources */,
 				EC6A3CD91E8E91FE00F5E717 /* SequencerViewController.swift in Sources */,
 			);

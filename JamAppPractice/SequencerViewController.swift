@@ -10,7 +10,7 @@ import UIKit
 
 private let reuseIdentifier = "sequencerCell"
 
-class SequencerViewController: UICollectionViewController {
+class SequencerViewController: UICollectionViewController, SequencerCellDelegate {
     
     let oscSequencer = OscSequencer()
 
@@ -41,17 +41,17 @@ class SequencerViewController: UICollectionViewController {
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! SequencerCell
-        
-        
+        cell.itemNum = indexPath.item
+        cell.delegate = self
     
         return cell
     }
     
-    func reportCellChange() {
-        print(collectionView?.indexPathsForSelectedItems)
+    func buttonChange(key: Int, value: Bool) {
+        print("BUTTON CHANGE")
+        oscSequencer.changeNote(key: key, value: value)
     }
     
-
-
+    
 
 }
