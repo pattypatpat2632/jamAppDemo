@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AudioKit
 
 private let reuseIdentifier = "sequencerCell"
 
@@ -49,10 +50,18 @@ class SequencerViewController: UICollectionViewController, SequencerCellDelegate
     
     func buttonChange(key: Int, value: Bool) {
         print("BUTTON CHANGE")
+        if value {
+            displayKeyboard()
+        }
         oscSequencer.changeNote(key: key, value: value)
     }
     
-
+    func displayKeyboard() {
+        let screenBounds = UIScreen.main.bounds
+        let keyboardFrame = CGRect(x: screenBounds.minX, y: screenBounds.maxY/2, width: screenBounds.width, height: screenBounds.height/2)
+        let keyboard = AKKeyboardView(frame: keyboardFrame)
+        self.collectionView?.addSubview(keyboard)
+    }
 
     
     

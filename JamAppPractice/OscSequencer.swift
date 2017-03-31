@@ -56,10 +56,10 @@ class OscSequencer {
         sequencer.setLength(sequenceLength)
         generateSequence(fromDictionary: noteDictionary)
         
-        AudioKit.output = midiNode
+        AudioKit.output = verb
         AudioKit.start()
         midiNode.enableMIDI(midi.client, name: "midiNode midi in")
-        sequencer.setTempo(240.0)
+        sequencer.setTempo(360.0)
         sequencer.enableLooping()
         sequencer.play()
         print("Beat ********** \(sequencer.currentRelativePosition.beats)")
