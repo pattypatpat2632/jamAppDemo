@@ -39,14 +39,4 @@ import Foundation
 //    }
 
 
-//       func generateSequence(fromDictionary dictionary: [Int: Bool]) {
-//sequencer.tracks[0].clear()
-//let numberOfSteps = 15
-//for i in 0 ... numberOfSteps {
-//    if dictionary[i] == true {
-//        sequencer.tracks[0].add(noteNumber: 69, velocity: 127, position: AKDuration(beats: Double(i)), duration: AKDuration(beats: 0.25))
-//    }
-//}
-//sequencer.setLength(sequenceLength)
-//}
 //}

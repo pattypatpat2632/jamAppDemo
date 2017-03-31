@@ -52,6 +52,9 @@ class SequencerViewController: UICollectionViewController, SequencerCellDelegate
         oscSequencer.changeNote(key: key, value: value)
     }
     
+
+
+    
     
 
 }

@@ -18,6 +18,7 @@ class OscSequencer {
     let scale1: [Int] = [0, 2, 4, 7, 9]
     let scale2: [Int] = [0, 3, 5, 7, 10]
     let sequenceLength = AKDuration(beats: 16.0)
+    
     var noteDictionary = [
         0: false,
         1: false,
@@ -75,6 +76,17 @@ class OscSequencer {
     
     func changeTempo(_ newTempo: Double) {
         sequencer.setTempo(newTempo)
+    }
+    
+    func generateSequence(fromDictionary dictionary: [Int: Bool]) {
+        sequencer.tracks[0].clear()
+        let numberOfSteps = 15
+        for i in 0 ... numberOfSteps {
+            if dictionary[i] == true {
+                sequencer.tracks[0].add(noteNumber: 69, velocity: 127, position: AKDuration(beats: Double(i)), duration: AKDuration(beats: 1.0))
+            }
+        }
+        sequencer.setLength(sequenceLength)
     }
     
     
