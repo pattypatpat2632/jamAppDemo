@@ -10,8 +10,9 @@
 		60A2F743B726DED7212AB4CB /* Pods_JamAppPracticeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2BF28357E02BC8E6DFBFD41 /* Pods_JamAppPracticeUITests.framework */; };
 		6CD9474C3A1BDE777A7AA777 /* Pods_JamAppPractice.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32A6E4A1621889D3BB0BEBD7 /* Pods_JamAppPractice.framework */; };
 		AC9AD004D2BF1BF06CA9F174 /* Pods_JamAppPracticeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CE1ABF96A71EEA28E99AFFA /* Pods_JamAppPracticeTests.framework */; };
+		EC6A3CD71E8E8FE600F5E717 /* SequencerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC6A3CD61E8E8FE600F5E717 /* SequencerCell.swift */; };
+		EC6A3CD91E8E91FE00F5E717 /* SequencerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC6A3CD81E8E91FE00F5E717 /* SequencerViewController.swift */; };
 		ECD599E01E831D380028505E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECD599DF1E831D380028505E /* AppDelegate.swift */; };
-		ECD599E21E831D380028505E /* SequencerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECD599E11E831D380028505E /* SequencerViewController.swift */; };
 		ECD599E51E831D380028505E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECD599E31E831D380028505E /* Main.storyboard */; };
 		ECD599E71E831D380028505E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ECD599E61E831D380028505E /* Assets.xcassets */; };
 		ECD599EA1E831D380028505E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECD599E81E831D380028505E /* LaunchScreen.storyboard */; };
@@ -46,9 +47,10 @@
 		91E5A1A9D88CA5EBFA8D302C /* Pods-JamAppPracticeUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JamAppPracticeUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-JamAppPracticeUITests/Pods-JamAppPracticeUITests.release.xcconfig"; sourceTree = "<group>"; };
 		9BBEADE16CDA6DA6F3F3FCDA /* Pods-JamAppPracticeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JamAppPracticeTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JamAppPracticeTests/Pods-JamAppPracticeTests.debug.xcconfig"; sourceTree = "<group>"; };
 		D2BF28357E02BC8E6DFBFD41 /* Pods_JamAppPracticeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JamAppPracticeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EC6A3CD61E8E8FE600F5E717 /* SequencerCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SequencerCell.swift; sourceTree = "<group>"; };
+		EC6A3CD81E8E91FE00F5E717 /* SequencerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SequencerViewController.swift; sourceTree = "<group>"; };
 		ECD599DC1E831D380028505E /* JamAppPractice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JamAppPractice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECD599DF1E831D380028505E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		ECD599E11E831D380028505E /* SequencerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SequencerViewController.swift; sourceTree = "<group>"; };
 		ECD599E41E831D380028505E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		ECD599E61E831D380028505E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ECD599E91E831D380028505E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -114,6 +116,13 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		EC6A3CD51E8E8D1D00F5E717 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
 		ECD46CEE1E8D598300EC20CA /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -126,8 +135,8 @@
 		ECD46CEF1E8D598900EC20CA /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				ECD599DF1E831D380028505E /* AppDelegate.swift */,
 				ECD5D5D01E83591800ED04C9 /* OscSequencer.swift */,
+				ECD599DF1E831D380028505E /* AppDelegate.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -135,7 +144,8 @@
 		ECD46CF01E8D598F00EC20CA /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				ECD599E11E831D380028505E /* SequencerViewController.swift */,
+				EC6A3CD61E8E8FE600F5E717 /* SequencerCell.swift */,
+				EC6A3CD81E8E91FE00F5E717 /* SequencerViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -165,6 +175,7 @@
 		ECD599DE1E831D380028505E /* JamAppPractice */ = {
 			isa = PBXGroup;
 			children = (
+				EC6A3CD51E8E8D1D00F5E717 /* Extensions */,
 				ECD46CF01E8D598F00EC20CA /* Controllers */,
 				ECD46CEF1E8D598900EC20CA /* Models */,
 				ECD46CEE1E8D598300EC20CA /* Views */,
@@ -481,9 +492,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ECD599E21E831D380028505E /* SequencerViewController.swift in Sources */,
+				EC6A3CD71E8E8FE600F5E717 /* SequencerCell.swift in Sources */,
 				ECD599E01E831D380028505E /* AppDelegate.swift in Sources */,
 				ECD5D5D11E83591800ED04C9 /* OscSequencer.swift in Sources */,
+				EC6A3CD91E8E91FE00F5E717 /* SequencerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
