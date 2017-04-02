@@ -14,12 +14,13 @@ private let reuseIdentifier = "sequencerCell"
 class SequencerViewController: UICollectionViewController, SequencerCellDelegate {
     
     let oscSequencer = OscSequencer()
+    let keyboard = KeyboardView()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         self.collectionView?.backgroundColor = UIColor.black
         oscSequencer.setUpSequencer()
-
+        setupKeyboard()
     }
 
     override func didReceiveMemoryWarning() {
@@ -44,26 +45,29 @@ class SequencerViewController: UICollectionViewController, SequencerCellDelegate
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! SequencerCell
         cell.itemNum = indexPath.item
         cell.delegate = self
-    
         return cell
     }
     
     func buttonChange(key: Int, value: Bool) {
-        print("BUTTON CHANGE")
+        oscSequencer.changeNote(key: key, value: value)
         if value {
             displayKeyboard()
         }
-        oscSequencer.changeNote(key: key, value: value)
     }
     
     func displayKeyboard() {
-        let screenBounds = UIScreen.main.bounds
-        let keyboardFrame = CGRect(x: screenBounds.minX, y: screenBounds.maxY/2, width: screenBounds.width, height: screenBounds.height/2)
-        let keyboard = AKKeyboardView(frame: keyboardFrame)
-        self.collectionView?.addSubview(keyboard)
+        keyboard.isHidden = false
     }
-
     
+    func setupKeyboard() {
+        let screenBounds = UIScreen.main.bounds
+        let keyboardFrame = CGRect(x: screenBounds.minX, y: screenBounds.minY, width: screenBounds.width,height: screenBounds.height/3)
+        keyboard.frame = keyboardFrame
+        self.collectionView?.addSubview(keyboard)
+        
+        keyboard.isHidden = true
+    }
+   
     
 
 }

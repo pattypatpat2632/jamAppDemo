@@ -13,6 +13,9 @@
 		EC6A3CD71E8E8FE600F5E717 /* SequencerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC6A3CD61E8E8FE600F5E717 /* SequencerCell.swift */; };
 		EC6A3CD91E8E91FE00F5E717 /* SequencerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC6A3CD81E8E91FE00F5E717 /* SequencerViewController.swift */; };
 		EC6A3CDB1E8ED6BA00F5E717 /* Sequencer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC6A3CDA1E8ED6BA00F5E717 /* Sequencer.swift */; };
+		EC6A3CDD1E8FF0DA00F5E717 /* KeyboardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EC6A3CDC1E8FF0DA00F5E717 /* KeyboardView.xib */; };
+		EC6A3CDF1E8FF2B400F5E717 /* KeyboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC6A3CDE1E8FF2B400F5E717 /* KeyboardView.swift */; };
+		EC6A3CE11E8FF35F00F5E717 /* Scale.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC6A3CE01E8FF35F00F5E717 /* Scale.swift */; };
 		ECD599E01E831D380028505E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECD599DF1E831D380028505E /* AppDelegate.swift */; };
 		ECD599E51E831D380028505E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECD599E31E831D380028505E /* Main.storyboard */; };
 		ECD599E71E831D380028505E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ECD599E61E831D380028505E /* Assets.xcassets */; };
@@ -51,6 +54,9 @@
 		EC6A3CD61E8E8FE600F5E717 /* SequencerCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SequencerCell.swift; sourceTree = "<group>"; };
 		EC6A3CD81E8E91FE00F5E717 /* SequencerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SequencerViewController.swift; sourceTree = "<group>"; };
 		EC6A3CDA1E8ED6BA00F5E717 /* Sequencer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sequencer.swift; sourceTree = "<group>"; };
+		EC6A3CDC1E8FF0DA00F5E717 /* KeyboardView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KeyboardView.xib; sourceTree = "<group>"; };
+		EC6A3CDE1E8FF2B400F5E717 /* KeyboardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardView.swift; sourceTree = "<group>"; };
+		EC6A3CE01E8FF35F00F5E717 /* Scale.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Scale.swift; sourceTree = "<group>"; };
 		ECD599DC1E831D380028505E /* JamAppPractice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JamAppPractice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECD599DF1E831D380028505E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ECD599E41E831D380028505E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -129,6 +135,7 @@
 		ECD46CEE1E8D598300EC20CA /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				EC6A3CDC1E8FF0DA00F5E717 /* KeyboardView.xib */,
 				ECD599E31E831D380028505E /* Main.storyboard */,
 				ECD599E81E831D380028505E /* LaunchScreen.storyboard */,
 			);
@@ -138,6 +145,7 @@
 		ECD46CEF1E8D598900EC20CA /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				EC6A3CE01E8FF35F00F5E717 /* Scale.swift */,
 				ECD5D5D01E83591800ED04C9 /* OscSequencer.swift */,
 				ECD599DF1E831D380028505E /* AppDelegate.swift */,
 			);
@@ -149,6 +157,7 @@
 			children = (
 				EC6A3CD61E8E8FE600F5E717 /* SequencerCell.swift */,
 				EC6A3CD81E8E91FE00F5E717 /* SequencerViewController.swift */,
+				EC6A3CDE1E8FF2B400F5E717 /* KeyboardView.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -331,6 +340,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ECD599EA1E831D380028505E /* LaunchScreen.storyboard in Resources */,
+				EC6A3CDD1E8FF0DA00F5E717 /* KeyboardView.xib in Resources */,
 				ECD599E71E831D380028505E /* Assets.xcassets in Resources */,
 				ECD599E51E831D380028505E /* Main.storyboard in Resources */,
 			);
@@ -498,6 +508,8 @@
 				EC6A3CD71E8E8FE600F5E717 /* SequencerCell.swift in Sources */,
 				ECD599E01E831D380028505E /* AppDelegate.swift in Sources */,
 				EC6A3CDB1E8ED6BA00F5E717 /* Sequencer.swift in Sources */,
+				EC6A3CDF1E8FF2B400F5E717 /* KeyboardView.swift in Sources */,
+				EC6A3CE11E8FF35F00F5E717 /* Scale.swift in Sources */,
 				ECD5D5D11E83591800ED04C9 /* OscSequencer.swift in Sources */,
 				EC6A3CD91E8E91FE00F5E717 /* SequencerViewController.swift in Sources */,
 			);
