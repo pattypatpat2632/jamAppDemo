@@ -67,7 +67,4 @@ class SequencerViewController: UICollectionViewController, SequencerCellDelegate
         
         keyboard.isHidden = true
     }
-   
-    
-
 }
