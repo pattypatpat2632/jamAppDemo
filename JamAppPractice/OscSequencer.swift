@@ -20,22 +20,22 @@ class OscSequencer {
     let sequenceLength = AKDuration(beats: 16.0)
     
     var noteDictionary = [
-        0: false,
-        1: false,
-        2: false,
-        3: false,
-        4: false,
-        5: false,
-        6: false,
-        7: false,
-        8: false,
-        9: false,
-        10: false,
-        11: false,
-        12: false,
-        13: false,
-        14: false,
-        15: false
+        0: (false, 60),
+        1: (false, 60),
+        2: (false, 60),
+        3: (false, 60),
+        4: (false, 60),
+        5: (false, 60),
+        6: (false, 60),
+        7: (false, 60),
+        8: (false, 60),
+        9: (false, 60),
+        10: (false, 60),
+        11: (false, 60),
+        12: (false, 60),
+        13: (false, 60),
+        14: (false, 60),
+        15: (false, 60)
     ]
     
     init() {
@@ -66,8 +66,8 @@ class OscSequencer {
         
     }
     
-    func changeNote(key: Int, value: Bool) {
-        noteDictionary[key] = value
+    func changeNote(key: Int, noteOn: Bool, noteValue: Int) {
+        noteDictionary[key] = (noteOn, noteValue)
         generateSequence(fromDictionary: noteDictionary)
     }
     
@@ -78,12 +78,14 @@ class OscSequencer {
         sequencer.setTempo(newTempo)
     }
     
-    func generateSequence(fromDictionary dictionary: [Int: Bool]) {
+    func generateSequence(fromDictionary dictionary: [Int: (Bool, Int)]) {
         sequencer.tracks[0].clear()
         let numberOfSteps = 15
         for i in 0 ... numberOfSteps {
-            if dictionary[i] == true {
-                sequencer.tracks[0].add(noteNumber: 69, velocity: 127, position: AKDuration(beats: Double(i)), duration: AKDuration(beats: 1.0))
+            if dictionary[i]?.0 == true {
+                if let noteNum = dictionary[i]?.1 {
+                    sequencer.tracks[0].add(noteNumber: MIDINoteNumber(noteNum), velocity: 127, position: AKDuration(beats: Double(i)), duration: AKDuration(beats: 1.0))
+                }
             }
         }
         sequencer.setLength(sequenceLength)
