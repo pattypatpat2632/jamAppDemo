@@ -79,6 +79,7 @@ class OscSequencer {
     }
     
     func generateSequence(fromDictionary dictionary: [Int: (Bool, Int)]) {
+        print("SEQUENCE GENERATED")
         sequencer.tracks[0].clear()
         let numberOfSteps = 15
         for i in 0 ... numberOfSteps {

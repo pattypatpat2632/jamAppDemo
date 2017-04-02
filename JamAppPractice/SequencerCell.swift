@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SequencerCell: UICollectionViewCell, KeyboardViewDelegate {
+class SequencerCell: UICollectionViewCell {
     
     @IBOutlet weak var lightView: UIView!
     @IBOutlet weak var pad: UIButton!
@@ -19,23 +19,33 @@ class SequencerCell: UICollectionViewCell, KeyboardViewDelegate {
     @IBAction func padTapped(_ sender: Any) {
         guard let itemNum = itemNum else {return}//TODO handle this error better
         if cellIsOn{
-            self.pad.alpha = 0.5
-            delegate?.buttonChange(key: itemNum, noteOn: !cellIsOn, noteValue: nil)
             cellIsOn = false
+
+            self.pad.alpha = 0.5
+            delegate?.buttonChange(key: itemNum, noteOn: cellIsOn, noteValue: nil)
         } else {
-            self.pad.alpha = 1
-            getNote()
-            delegate?.buttonChange(key: itemNum, noteOn: !cellIsOn, noteValue: nil)
             cellIsOn = true
+
+            self.pad.alpha = 1
+            getNote(completion: { (noteValue) in
+                self.delegate?.buttonChange(key: itemNum, noteOn: self.cellIsOn, noteValue: noteValue)
+            })
+            
         }
     }
     
     
-    func getNote() {
+    func getNote(completion: @escaping (Int) -> Void) {
         let screenBounds = UIScreen.main.bounds
         let keyboardFrame = CGRect(x: screenBounds.minX, y: screenBounds.minY, width: screenBounds.width,height: screenBounds.height/3)
         let keyboard = KeyboardView(frame: keyboardFrame)
         self.superview?.addSubview(keyboard)
+       NotificationCenter.default.addObserver(forName: NSNotification.Name("keyPressedNotification"), object: nil, queue: nil) { (notification) in
+            print(notification.object)
+            let note = notification.object as! Int //TODO handle ! better
+            completion(note)
+        }
+        //TODO set up observer for a return from the keyboard, and when it returns, run completion with the new value
     }
 }
 

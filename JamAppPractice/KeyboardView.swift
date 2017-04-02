@@ -77,12 +77,13 @@ class KeyboardView: UIView {
         c2Key.setNoteValue(to: 72)
     }
     
-    func keyPressed(recognizer: UITapGestureRecognizer, completion: (Int) -> Void) {
+    func keyPressed(recognizer: UITapGestureRecognizer) {
         let associatedView = recognizer.view as? KeyView
         print(associatedView?.noteValue ?? "No note value")
         guard let noteValue = associatedView?.noteValue else {return} //TODO handle this error better
         delegate?.respondToKeyPress(noteValue: noteValue)
         self.isHidden = true
+        NotificationCenter.default.post(name: NSNotification.Name("keyPressedNotification"), object: noteValue)
     }
 }
 
