@@ -25,8 +25,6 @@ class KeyboardView: UIView {
     @IBOutlet weak var gSharpKey: KeyView!
     @IBOutlet weak var aSharpKey: KeyView!
     
-    var delegate: KeyboardViewDelegate?
-    
     @IBOutlet var contentView: UIView!
 
     override init(frame: CGRect) {
@@ -81,13 +79,9 @@ class KeyboardView: UIView {
         let associatedView = recognizer.view as? KeyView
         print(associatedView?.noteValue ?? "No note value")
         guard let noteValue = associatedView?.noteValue else {return} //TODO handle this error better
-        delegate?.respondToKeyPress(noteValue: noteValue)
         self.isHidden = true
         NotificationCenter.default.post(name: NSNotification.Name("keyPressedNotification"), object: noteValue)
     }
 }
 
-protocol KeyboardViewDelegate {
-    func respondToKeyPress(noteValue: Int)
-    
-}
+

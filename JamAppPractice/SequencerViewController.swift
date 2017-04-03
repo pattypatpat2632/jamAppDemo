@@ -49,6 +49,7 @@ class SequencerViewController: UICollectionViewController, SequencerCellDelegate
     
     func buttonChange(key: Int, noteOn: Bool, noteValue: Int?) {
         let noteValue = noteValue ?? 60
+        print("Telling sequencet to update with key \(key) note on: \(noteOn) and note value: \(noteValue)")
         oscSequencer.changeNote(key: key, noteOn: noteOn, noteValue: noteValue)
 
     }

@@ -52,7 +52,6 @@ class OscSequencer {
         verb = AKReverb(midiNode)
         
         _ = sequencer.newTrack()
-        print("TRACK COUNT *************** \(sequencer.tracks.count)")
         sequencer.setLength(sequenceLength)
         generateSequence(fromDictionary: noteDictionary)
         
@@ -62,18 +61,13 @@ class OscSequencer {
         sequencer.setTempo(360.0)
         sequencer.enableLooping()
         sequencer.play()
-        print("Beat ********** \(sequencer.currentRelativePosition.beats)")
-        
     }
     
     func changeNote(key: Int, noteOn: Bool, noteValue: Int) {
         noteDictionary[key] = (noteOn, noteValue)
         generateSequence(fromDictionary: noteDictionary)
     }
-    
-    
-   
-    
+
     func changeTempo(_ newTempo: Double) {
         sequencer.setTempo(newTempo)
     }
