@@ -29,7 +29,6 @@ class SequencerCell: UICollectionViewCell, KeyboardViewDelegate {
         }
     }
     
-    
     func showKeyboard() {
         let screenBounds = UIScreen.main.bounds
         let keyboardFrame = CGRect(x: screenBounds.minX, y: screenBounds.minY, width: screenBounds.width,height: screenBounds.height/3)

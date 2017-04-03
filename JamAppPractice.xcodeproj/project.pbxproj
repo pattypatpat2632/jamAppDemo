@@ -17,6 +17,7 @@
 		EC6A3CDF1E8FF2B400F5E717 /* KeyboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC6A3CDE1E8FF2B400F5E717 /* KeyboardView.swift */; };
 		EC6A3CE11E8FF35F00F5E717 /* Scale.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC6A3CE01E8FF35F00F5E717 /* Scale.swift */; };
 		EC6A3CE31E918C2700F5E717 /* KeyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC6A3CE21E918C2700F5E717 /* KeyView.swift */; };
+		EC6A3CE61E91E78E00F5E717 /* MultipeerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC6A3CE51E91E78E00F5E717 /* MultipeerManager.swift */; };
 		ECD599E01E831D380028505E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECD599DF1E831D380028505E /* AppDelegate.swift */; };
 		ECD599E51E831D380028505E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECD599E31E831D380028505E /* Main.storyboard */; };
 		ECD599E71E831D380028505E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ECD599E61E831D380028505E /* Assets.xcassets */; };
@@ -59,6 +60,7 @@
 		EC6A3CDE1E8FF2B400F5E717 /* KeyboardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardView.swift; sourceTree = "<group>"; };
 		EC6A3CE01E8FF35F00F5E717 /* Scale.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Scale.swift; sourceTree = "<group>"; };
 		EC6A3CE21E918C2700F5E717 /* KeyView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyView.swift; sourceTree = "<group>"; };
+		EC6A3CE51E91E78E00F5E717 /* MultipeerManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultipeerManager.swift; sourceTree = "<group>"; };
 		ECD599DC1E831D380028505E /* JamAppPractice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JamAppPractice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECD599DF1E831D380028505E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ECD599E41E831D380028505E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -134,6 +136,14 @@
 			name = Extensions;
 			sourceTree = "<group>";
 		};
+		EC6A3CE41E91E77800F5E717 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				EC6A3CE51E91E78E00F5E717 /* MultipeerManager.swift */,
+			);
+			name = Utility;
+			sourceTree = "<group>";
+		};
 		ECD46CEE1E8D598300EC20CA /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -190,6 +200,7 @@
 		ECD599DE1E831D380028505E /* JamAppPractice */ = {
 			isa = PBXGroup;
 			children = (
+				EC6A3CE41E91E77800F5E717 /* Utility */,
 				EC6A3CD51E8E8D1D00F5E717 /* Extensions */,
 				ECD46CF01E8D598F00EC20CA /* Controllers */,
 				ECD46CEF1E8D598900EC20CA /* Models */,
@@ -515,6 +526,7 @@
 				EC6A3CE31E918C2700F5E717 /* KeyView.swift in Sources */,
 				EC6A3CE11E8FF35F00F5E717 /* Scale.swift in Sources */,
 				ECD5D5D11E83591800ED04C9 /* OscSequencer.swift in Sources */,
+				EC6A3CE61E91E78E00F5E717 /* MultipeerManager.swift in Sources */,
 				EC6A3CD91E8E91FE00F5E717 /* SequencerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
