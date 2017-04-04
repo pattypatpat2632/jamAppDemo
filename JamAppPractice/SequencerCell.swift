@@ -35,7 +35,6 @@ class SequencerCell: UICollectionViewCell, KeyboardViewDelegate {
         let keyboard = KeyboardView(frame: keyboardFrame)
         keyboard.delegate = self
         self.superview?.addSubview(keyboard)
-        //TODO set up observer for a return from the keyboard, and when it returns, run completion with the new value
     }
     
     func noteOn(noteValue: Int) {
