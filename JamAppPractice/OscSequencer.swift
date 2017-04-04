@@ -18,33 +18,18 @@ class OscSequencer {
     var verb: AKReverb?
     let scale1: [Int] = [0, 2, 4, 7, 9]
     let scale2: [Int] = [0, 3, 5, 7, 10]
-    let sequenceLength = AKDuration(beats: 16.0)
+    let sequenceLength = AKDuration(beats: 18.0)
     
-    var noteDictionary = [
-        0: (false, 60),
-        1: (false, 60),
-        2: (false, 60),
-        3: (false, 60),
-        4: (false, 60),
-        5: (false, 60),
-        6: (false, 60),
-        7: (false, 60),
-        8: (false, 60),
-        9: (false, 60),
-        10: (false, 60),
-        11: (false, 60),
-        12: (false, 60),
-        13: (false, 60),
-        14: (false, 60),
-        15: (false, 60)
-    ]
+    var noteDictionary = [Int: (Bool, Int)]()
     
-    init() {
-        
-    }
+    init() {}
     
     func setUpSequencer() {
         let midiNode = AKMIDINode(node: oscBank)
+        
+        for key in 0...17 {
+            noteDictionary[key] = (false, 60)
+        }
 
         oscBank.attackDuration = 0.1
         oscBank.decayDuration = 0.1
@@ -76,7 +61,7 @@ class OscSequencer {
     func generateSequence(fromDictionary dictionary: [Int: (Bool, Int)]) {
         print("SEQUENCE GENERATED")
         sequencer.tracks[0].clear()
-        let numberOfSteps = 15
+        let numberOfSteps = 17
         for i in 0 ... numberOfSteps {
             if dictionary[i]?.0 == true {
                 if let noteNum = dictionary[i]?.1 {
@@ -86,7 +71,4 @@ class OscSequencer {
         }
         sequencer.setLength(sequenceLength)
     }
-    
-    
-    
 }
