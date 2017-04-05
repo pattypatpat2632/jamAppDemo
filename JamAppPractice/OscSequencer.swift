@@ -16,8 +16,6 @@ class OscSequencer {
     let sequencer = AKSequencer()
     let midi = AKMIDI()
     var verb: AKReverb?
-    let scale1: [Int] = [0, 2, 4, 7, 9]
-    let scale2: [Int] = [0, 3, 5, 7, 10]
     let sequenceLength = AKDuration(beats: 18.0)
     
     var noteDictionary = [Int: (Bool, Int)]()
